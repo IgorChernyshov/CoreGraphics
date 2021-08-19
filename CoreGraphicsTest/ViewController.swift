@@ -13,19 +13,19 @@ final class ViewController: UIViewController {
 	@IBOutlet var imageView: UIImageView!
 
 	// MARK: - Properties
-	private var currentDrawType = 0
+	private var currentDrawType = 6
 
 	// MARK: - Lifecycle
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		drawRectangle()
+		redrawDidTap(self)
 	}
 
 	// MARK: - Actions
 	@IBAction func redrawDidTap(_ sender: Any) {
 		currentDrawType += 1
 
-		if currentDrawType > 5 { currentDrawType = 0 }
+		if currentDrawType > 7 { currentDrawType = 0 }
 
 		switch currentDrawType {
 		case 0: drawRectangle()
@@ -34,6 +34,8 @@ final class ViewController: UIViewController {
 		case 3: drawRotatedSquares()
 		case 4: drawLines()
 		case 5: drawImagesAndText()
+		case 6: drawSurprisedEmoji()
+		case 7: drawTwinText()
 		default: break
 		}
 	}
@@ -158,6 +160,76 @@ final class ViewController: UIViewController {
 
 			let mouse = UIImage(named: "mouse")
 			mouse?.draw(at: CGPoint(x: 300, y: 150))
+		}
+
+		imageView.image = image
+	}
+
+	private func drawSurprisedEmoji() {
+		let renderer = UIGraphicsImageRenderer(size: CGSize(width: 512, height: 512))
+
+		let image = renderer.image { context in
+			// Draw head
+			context.cgContext.setFillColor(UIColor.yellow.cgColor)
+			context.cgContext.setStrokeColor(UIColor.black.cgColor)
+			context.cgContext.setLineWidth(5)
+			let face = CGRect(x: 0, y: 0, width: 512, height: 512).insetBy(dx: 5, dy: 5)
+			context.cgContext.addEllipse(in: face)
+			context.cgContext.drawPath(using: .fillStroke)
+
+			// Draw eyes
+			context.cgContext.setFillColor(UIColor.brown.cgColor)
+			context.cgContext.setStrokeColor(UIColor.brown.cgColor)
+			context.cgContext.setLineWidth(1)
+			let leftEye = CGRect(x: 150, y: 150, width: 25, height: 25)
+			context.cgContext.addEllipse(in: leftEye)
+			let rightEye = CGRect(x: 312, y: 150, width: 25, height: 25)
+			context.cgContext.addEllipse(in: rightEye)
+
+			// Draw mouth
+			let mouth = CGRect(x: 218, y: 360, width: 75, height: 75)
+			context.cgContext.addEllipse(in: mouth)
+			context.cgContext.drawPath(using: .fillStroke)
+		}
+
+		imageView.image = image
+	}
+
+	private func drawTwinText() {
+		let render = UIGraphicsImageRenderer(size: CGSize(width: 512, height: 512))
+
+		let image = render.image { context in
+			context.cgContext.setStrokeColor(UIColor.darkText.cgColor)
+
+			// T
+			context.cgContext.move(to: CGPoint(x: 10, y: 10))
+			context.cgContext.addLine(to: CGPoint(x: 90, y: 10))
+			context.cgContext.move(to: CGPoint(x: 50, y: 10))
+			context.cgContext.addLine(to: CGPoint(x: 50, y: 200))
+
+			// W
+			context.cgContext.move(to: CGPoint(x: 110, y: 10))
+			context.cgContext.addLine(to: CGPoint(x: 130, y: 200))
+			context.cgContext.addLine(to: CGPoint(x: 150, y: 10))
+			context.cgContext.addLine(to: CGPoint(x: 170, y: 200))
+			context.cgContext.addLine(to: CGPoint(x: 190, y: 10))
+
+			// I
+			context.cgContext.move(to: CGPoint(x: 210, y: 10))
+			context.cgContext.addLine(to: CGPoint(x: 230, y: 10))
+			context.cgContext.move(to: CGPoint(x: 210, y: 200))
+			context.cgContext.addLine(to: CGPoint(x: 230, y: 200))
+			context.cgContext.move(to: CGPoint(x: 220, y: 10))
+			context.cgContext.addLine(to: CGPoint(x: 220, y: 200))
+
+			// N
+			context.cgContext.move(to: CGPoint(x: 250, y: 200))
+			context.cgContext.addLine(to: CGPoint(x: 250, y: 10))
+			context.cgContext.addLine(to: CGPoint(x: 300, y: 200))
+			context.cgContext.addLine(to: CGPoint(x: 300, y: 10))
+
+			// Draw
+			context.cgContext.strokePath()
 		}
 
 		imageView.image = image
