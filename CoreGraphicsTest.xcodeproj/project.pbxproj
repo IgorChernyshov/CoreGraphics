@@ -16,7 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		D6C6EF5426CD73D6002CE2E3 /* CoreGraphics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreGraphics.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6C6EF5426CD73D6002CE2E3 /* CoreGraphicsTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreGraphicsTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6C6EF5726CD73D6002CE2E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D6C6EF5926CD73D6002CE2E3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		D6C6EF5B26CD73D6002CE2E3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -40,7 +40,7 @@
 		D6C6EF4B26CD73D6002CE2E3 = {
 			isa = PBXGroup;
 			children = (
-				D6C6EF5626CD73D6002CE2E3 /* CoreGraphics */,
+				D6C6EF5626CD73D6002CE2E3 /* CoreGraphicsTest */,
 				D6C6EF5526CD73D6002CE2E3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -48,12 +48,12 @@
 		D6C6EF5526CD73D6002CE2E3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D6C6EF5426CD73D6002CE2E3 /* CoreGraphics.app */,
+				D6C6EF5426CD73D6002CE2E3 /* CoreGraphicsTest.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D6C6EF5626CD73D6002CE2E3 /* CoreGraphics */ = {
+		D6C6EF5626CD73D6002CE2E3 /* CoreGraphicsTest */ = {
 			isa = PBXGroup;
 			children = (
 				D6C6EF5726CD73D6002CE2E3 /* AppDelegate.swift */,
@@ -64,15 +64,15 @@
 				D6C6EF6226CD73D6002CE2E3 /* LaunchScreen.storyboard */,
 				D6C6EF6526CD73D6002CE2E3 /* Info.plist */,
 			);
-			path = CoreGraphics;
+			path = CoreGraphicsTest;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D6C6EF5326CD73D6002CE2E3 /* CoreGraphics */ = {
+		D6C6EF5326CD73D6002CE2E3 /* CoreGraphicsTest */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D6C6EF6826CD73D6002CE2E3 /* Build configuration list for PBXNativeTarget "CoreGraphics" */;
+			buildConfigurationList = D6C6EF6826CD73D6002CE2E3 /* Build configuration list for PBXNativeTarget "CoreGraphicsTest" */;
 			buildPhases = (
 				D6C6EF5026CD73D6002CE2E3 /* Sources */,
 				D6C6EF5126CD73D6002CE2E3 /* Frameworks */,
@@ -82,9 +82,9 @@
 			);
 			dependencies = (
 			);
-			name = CoreGraphics;
+			name = CoreGraphicsTest;
 			productName = CoreGraphics;
-			productReference = D6C6EF5426CD73D6002CE2E3 /* CoreGraphics.app */;
+			productReference = D6C6EF5426CD73D6002CE2E3 /* CoreGraphicsTest.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -101,7 +101,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D6C6EF4F26CD73D6002CE2E3 /* Build configuration list for PBXProject "CoreGraphics" */;
+			buildConfigurationList = D6C6EF4F26CD73D6002CE2E3 /* Build configuration list for PBXProject "CoreGraphicsTest" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -114,7 +114,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D6C6EF5326CD73D6002CE2E3 /* CoreGraphics */,
+				D6C6EF5326CD73D6002CE2E3 /* CoreGraphicsTest */,
 			);
 		};
 /* End PBXProject section */
@@ -288,15 +288,15 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 73YFFUD89Y;
-				INFOPLIST_FILE = CoreGraphics/Info.plist;
+				INFOPLIST_FILE = CoreGraphicsTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = frostfell.CoreGraphics;
+				PRODUCT_BUNDLE_IDENTIFIER = frostfell.CoreGraphicsTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -307,22 +307,22 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 73YFFUD89Y;
-				INFOPLIST_FILE = CoreGraphics/Info.plist;
+				INFOPLIST_FILE = CoreGraphicsTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = frostfell.CoreGraphics;
+				PRODUCT_BUNDLE_IDENTIFIER = frostfell.CoreGraphicsTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D6C6EF4F26CD73D6002CE2E3 /* Build configuration list for PBXProject "CoreGraphics" */ = {
+		D6C6EF4F26CD73D6002CE2E3 /* Build configuration list for PBXProject "CoreGraphicsTest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D6C6EF6626CD73D6002CE2E3 /* Debug */,
@@ -331,7 +331,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D6C6EF6826CD73D6002CE2E3 /* Build configuration list for PBXNativeTarget "CoreGraphics" */ = {
+		D6C6EF6826CD73D6002CE2E3 /* Build configuration list for PBXNativeTarget "CoreGraphicsTest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D6C6EF6926CD73D6002CE2E3 /* Debug */,
